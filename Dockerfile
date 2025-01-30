@@ -12,6 +12,6 @@ RUN go mod download
 
 RUN go build -o users .
 
-EXPOSE 8000
+EXPOSE 5010
 
 ENTRYPOINT ["go", "run", "cmd/server/main.go"]

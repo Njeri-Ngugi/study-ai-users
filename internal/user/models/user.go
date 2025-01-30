@@ -19,3 +19,11 @@ type User struct {
 	Gender         string    `gorm:"not null" json:"gender"`
 	DateOfBirth    time.Time `gorm:"default:null" json:"date_of_birth"`
 }
+
+type Course struct {
+	models.Model   `gorm:"embedded"`
+	CourseName     string `gorm:"unique,not null" json:"course_name"`
+	CourseCode     string `gorm:"unique,not null" json:"course_code"`
+	Institution    string `gorm:"not null" json:"institution"`
+	CourseDuration int    `gorm:"default:4;not null" json:"course_duration"`
+}
