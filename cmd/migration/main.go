@@ -11,6 +11,7 @@ import (
 func RunMigrations() error {
 	modelsMigrated := []any{
 		models.User{},
+		models.Course{},
 	}
 
 	queries, err := gormschema.New("postgres").Load(modelsMigrated...)
