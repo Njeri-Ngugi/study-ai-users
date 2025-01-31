@@ -1,4 +1,7 @@
-h1:ElONDsZ5Xr7WxjIvUNMh2Z+4TQLpYDAuth/Kb2kB0qs=
+h1:qmsi3K2kAKdB/knEp1UrIX+aeGwKs9QPgMIKY986C18=
 20241205214107_create_users_model.sql h1:HZD48gZQGyfaApvlXvo77ADDBiG8EW6D9b4jFTrl9oQ=
 20250130072709_create_course_table.sql h1:5aomPGHWSC03/yV3BTGeGR2AfKmMz37Fr+6itCoMnVc=
 20250131065710_create_course_unit_institution_tables.sql h1:4D/wdm9dyCuwVdS862KSq9U6mfPNRkd4jRRxZi9nfHg=
+20250131071941_update_table_institution_and_user.sql h1:1f2ZGEjmV/+VTb7gRcos/lnr43B9TfZhuBe7Mpf1o80=
+20250131083901_update_user_table_add_course_duration.sql h1:gKajNwcThH+u+gh1VhXgFcYvm1Wv3Vf+TBBY1uiklOI=
+20250131115338_drop_table_units.sql h1:iu/WgtSoTjG2UF3Js6lH8CvNyMOaCD/Cl6JOUW6O/fk=

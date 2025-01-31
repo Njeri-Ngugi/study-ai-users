@@ -14,7 +14,6 @@ func RunMigrations() error {
 		models.User{},
 		academicsModels.Course{},
 		academicsModels.Institution{},
-		academicsModels.Unit{},
 	}
 
 	queries, err := gormschema.New("postgres").Load(modelsMigrated...)
