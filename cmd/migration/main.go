@@ -5,13 +5,16 @@ import (
 	"github.com/sirupsen/logrus"
 	"io"
 	"os"
+	academicsModels "users/internal/academics/models"
 	"users/internal/user/models"
 )
 
 func RunMigrations() error {
 	modelsMigrated := []any{
 		models.User{},
-		models.Course{},
+		academicsModels.Course{},
+		academicsModels.Institution{},
+		academicsModels.Unit{},
 	}
 
 	queries, err := gormschema.New("postgres").Load(modelsMigrated...)
