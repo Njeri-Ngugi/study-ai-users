@@ -20,16 +20,8 @@ github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/internal v0.8.0/go.mod h
 github.com/AzureAD/microsoft-authentication-library-for-go v1.0.0/go.mod h1:kgDmCTgBzIEPFElEF+FK0SdjAor06dRq2Go927dnQ6o=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.1.0 h1:HCc0+LpPfpCKs6LGGLAhwBARt9632unrVcI6i8s/8os=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.1.0/go.mod h1:wP83P5OoQ5p6ip3ScPr0BAq0BvuPAvacpEuSzyouqAI=
-github.com/Njeri-Ngugi/toolbox v1.0.4 h1:fhLLKIK2PWGz8juob8AB/FtVEQHtubwKHWY+f9u3e9A=
-github.com/Njeri-Ngugi/toolbox v1.0.4/go.mod h1:2UkhCL8zjlFub26uBAXGwWNdM6GAsbOpBs5icNIxO4E=
-github.com/Njeri-Ngugi/toolbox v1.0.5 h1:0cs2OcB1pqdZ2be7Hj1VyxrzhqHapR5oxe+S14RQbaI=
-github.com/Njeri-Ngugi/toolbox v1.0.5/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
-github.com/Njeri-Ngugi/toolbox v1.0.6 h1:M8N5C5ByYkjhcrs8l0PcV9GOgQqCGZxs9zZ7KPl9FHg=
-github.com/Njeri-Ngugi/toolbox v1.0.6/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
-github.com/Njeri-Ngugi/toolbox v1.0.7 h1:AXi9dHQbfUpRS6oxEjBvYhf4vZpMlFWVBMxhRkdr07A=
-github.com/Njeri-Ngugi/toolbox v1.0.7/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
-github.com/Njeri-Ngugi/toolbox v1.0.9 h1:d9lTPtMdQijhxAm/ZRcXfbZEQay3GVL/CViXC0aF3UA=
-github.com/Njeri-Ngugi/toolbox v1.0.9/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
+github.com/Njeri-Ngugi/toolbox v1.0.16 h1:c/Xkxvyi5WsRIfDSiJjDdWf4P8SxzJN/jLav0jVXmXY=
+github.com/Njeri-Ngugi/toolbox v1.0.16/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -37,6 +29,8 @@ github.com/dnaeon/go-vcr v1.1.0/go.mod h1:M7tiix8f0r6mKKJ3Yq/kqU1OYf3MnfmBWVbPx/
 github.com/dnaeon/go-vcr v1.2.0/go.mod h1:R4UdLID7HZT3taECzJs4YgbbH6PIGXB6W/sc5OLb6RQ=
 github.com/gabriel-vasile/mimetype v1.4.3 h1:in2uUcidCuFcDKtdcBxlR0rJ1+fsokWf+uqxgUFjbI0=
 github.com/gabriel-vasile/mimetype v1.4.3/go.mod h1:d8uq/6HKRL6CGdk+aubisF/M5GcPfT7nKyLpA0lbSSk=
+github.com/go-playground/assert/v2 v2.2.0 h1:JvknZsQTYeFEAhQwI4qEt9cyV5ONwRHC+lYKSsYSR8s=
+github.com/go-playground/assert/v2 v2.2.0/go.mod h1:VDjEfimB/XKnb+ZQfWdccd7VUvScMdVu0Titje2rxJ4=
 github.com/go-playground/locales v0.14.1 h1:EWaQ/wswjilfKLTECiXz7Rh+3BjFhfDFKv/oXslEjJA=
 github.com/go-playground/locales v0.14.1/go.mod h1:hxrqLVvrK65+Rwrd5Fc6F2O76J/NuW9t0sjnWqG1slY=
 github.com/go-playground/universal-translator v0.18.1 h1:Bcnm0ZwsGyWbCzImXv+pAJnYK9S473LQFuzCbDbfSFY=

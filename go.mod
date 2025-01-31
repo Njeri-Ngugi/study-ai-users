@@ -4,7 +4,7 @@ go 1.23.2
 
 require (
 	ariga.io/atlas-provider-gorm v0.5.0
-	github.com/Njeri-Ngugi/toolbox v1.0.9
+	github.com/Njeri-Ngugi/toolbox v1.0.16
 	github.com/gorilla/mux v1.8.1
 	github.com/jinzhu/copier v0.4.0
 	github.com/joho/godotenv v1.5.1

@@ -65,7 +65,8 @@ func AuthLoginHandler(w http.ResponseWriter, r *http.Request) {
 
 		// generate auth token
 		var authModel authSerializer.AuthModelData
-		err = copier.Copy(&authModel, &user)
+		err = copier.Copy(&authModel, userObj)
+
 		if err != nil {
 			return
 		}
