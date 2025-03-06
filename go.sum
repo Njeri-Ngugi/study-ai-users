@@ -26,6 +26,14 @@ github.com/Njeri-Ngugi/toolbox v1.0.17 h1:R3dPKOtd3jdxyu64jaiB+V14qj9Aq0vDyUqvG5
 github.com/Njeri-Ngugi/toolbox v1.0.17/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
 github.com/Njeri-Ngugi/toolbox v1.0.18 h1:7d5obleGhbZSiBEK2PXDzDqZLHO2YPJGoPESRr8KK0c=
 github.com/Njeri-Ngugi/toolbox v1.0.18/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
+github.com/Njeri-Ngugi/toolbox v1.0.19 h1:XSvYS/J4wc/AAUWND2Ao8Umd0yknjhPXXdncB8DKoEw=
+github.com/Njeri-Ngugi/toolbox v1.0.19/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
+github.com/Njeri-Ngugi/toolbox v1.0.20 h1:itp+9/qxgvdoHuWzkioDtDlxwmiUElz2xA/mTHCV3FY=
+github.com/Njeri-Ngugi/toolbox v1.0.20/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
+github.com/Njeri-Ngugi/toolbox v1.0.21 h1:yBz1YIg0E9V24IFX+Z9mjnhiAZS48S5ucZQ4bgVf+6A=
+github.com/Njeri-Ngugi/toolbox v1.0.21/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
+github.com/Njeri-Ngugi/toolbox v1.0.22 h1:LtN0GrvWHrCfu7j8eojTLX37vbfsdKKuiBckuTR1vRU=
+github.com/Njeri-Ngugi/toolbox v1.0.22/go.mod h1:UinWr5WPvTSvKJl5ItBo48BkolzM2FslaKXjyKyKFFI=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

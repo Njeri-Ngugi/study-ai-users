@@ -52,7 +52,7 @@ func AuthLoginHandler(w http.ResponseWriter, r *http.Request) {
 		// compare password with that of retrieved record
 		isValid, err := auth.ComparePasswords(userObj.Password, []byte(request.Password))
 		if err != nil {
-			logrus.Error(err)
+			logrus.Error("error credentials don't match", err, isValid)
 			helpers.HTTPErrorResponse(w, "invalid login credentials", http.StatusUnauthorized)
 			return
 		}
@@ -66,10 +66,11 @@ func AuthLoginHandler(w http.ResponseWriter, r *http.Request) {
 		// generate auth token
 		var authModel authSerializer.AuthModelData
 		err = copier.Copy(&authModel, userObj)
-
 		if err != nil {
 			return
 		}
+
+		logrus.Infoln("auth model: ", authModel)
 		token, err := auth.GenerateAuthToken(authModel)
 		if err != nil {
 			logrus.Error(err)
@@ -79,14 +80,15 @@ func AuthLoginHandler(w http.ResponseWriter, r *http.Request) {
 
 		// return success response
 		responseData := serializers.UserLoginResponse{
-			Token:    token,
 			UserData: user,
+			Token:    token,
 		}
 
 		response := helpers.Response{
 			Message: "User login successful",
 			Data:    responseData,
 		}
+		logrus.Infoln("successfully authenticated")
 
 		if err = helpers.HTTPResponse(w, response, http.StatusOK); err != nil {
 			logrus.Error("error sending http response", err)
