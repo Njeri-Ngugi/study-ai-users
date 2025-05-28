@@ -1,9 +1,9 @@
 package serializers
 
 type CreateUserRequest struct {
-	Firstname             string `json:"firstname" validate:"required,alpha"`
-	Lastname              string `json:"lastname" validate:"required,alpha"`
-	Username              string `json:"username" validate:"required,alphanum"`
+	Firstname             string `json:"firstname" validate:"required"`
+	Lastname              string `json:"lastname" validate:"required"`
+	Username              string `json:"username" validate:"required"`
 	Password              string `json:"password" validate:"required,min=8"`
 	Email                 string `json:"email" validate:"required,custom_email"`
 	InstitutionName       string `json:"institution_name" validate:"required"`

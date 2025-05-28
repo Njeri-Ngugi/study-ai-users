@@ -88,7 +88,6 @@ func AuthLoginHandler(w http.ResponseWriter, r *http.Request) {
 			Message: "User login successful",
 			Data:    responseData,
 		}
-		logrus.Infoln("successfully authenticated")
 
 		if err = helpers.HTTPResponse(w, response, http.StatusOK); err != nil {
 			logrus.Error("error sending http response", err)

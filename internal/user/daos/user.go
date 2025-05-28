@@ -14,68 +14,59 @@ import (
 )
 
 func GenerateCourseCode(institutionName, courseName string) string {
-	// Get 4-letter abbreviation for the institution
 	institutionAbbr := getInstitutionAbbr(institutionName)
-
-	// Get 3-letter abbreviation for the course
 	courseAbbr := getCourseAbbr(courseName)
-
-	// Combine to form the course code
 	return fmt.Sprintf("%s-%s", institutionAbbr, courseAbbr)
 }
 
-// Extracts a 4-letter abbreviation from the institution name
 func getInstitutionAbbr(name string) string {
 	words := splitWords(name)
-	abbr := strings.ToUpper(abbreviate(words, 4)) // Get 4-letter abbreviation
-	return abbr
+	if len(words) == 0 {
+		return "UNKN" // fallback abbreviation
+	}
+	return strings.ToUpper(abbreviate(words, 4))
 }
 
-// Extracts a 3-letter abbreviation from the course name
 func getCourseAbbr(name string) string {
 	words := splitWords(name)
-	abbr := strings.ToUpper(abbreviate(words, 3)) // Get 3-letter abbreviation
-	return abbr
+	if len(words) == 0 {
+		return "GEN" // fallback abbreviation
+	}
+	return strings.ToUpper(abbreviate(words, 3))
 }
 
-// Splits a string into words, removing non-alphabetic characters
 func splitWords(text string) []string {
-	// Remove non-alphabetic characters and split by spaces
 	re := regexp.MustCompile(`[a-zA-Z]+`)
 	return re.FindAllString(text, -1)
 }
 
-// Generates an abbreviation from a list of words, up to `length` characters
 func abbreviate(words []string, length int) string {
 	var abbr string
 
-	// Use first letters of words if possible
+	// First: try to use initials
 	for _, word := range words {
-		abbr += string(word[0])
-		if len(abbr) >= length {
-			return abbr[:length]
+		if len(word) > 0 {
+			abbr += string(word[0])
+			if len(abbr) >= length {
+				return abbr[:length]
+			}
 		}
 	}
 
-	// If abbreviation is still short, add second-last letter from the last word
-	if len(abbr) < length {
-		lastWord := words[len(words)-1] // Get the last word
-		secondLastLetter := getSecondLastLetter(lastWord)
-
-		if secondLastLetter != "" {
-			abbr += secondLastLetter
+	// If only one word and it's short, pad from inside the word
+	if len(words) == 1 {
+		word := words[0]
+		for i := 1; i < len(word) && len(abbr) < length; i++ {
+			abbr += string(word[i])
 		}
+	}
+
+	// If still not long enough, pad with 'X'
+	for len(abbr) < length {
+		abbr += "X"
 	}
 
 	return abbr[:length]
-}
-
-// Gets the second last letter from a word
-func getSecondLastLetter(word string) string {
-	if len(word) < 2 {
-		return string(word[len(word)-1])
-	}
-	return string(word[len(word)-2])
 }
 
 func ConvertDateIntoTime(dateString string) (*time.Time, error) {

@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"errors"
 	"fmt"
 	"github.com/Njeri-Ngugi/toolbox/helpers"
 	"github.com/Njeri-Ngugi/toolbox/postgres"
@@ -21,7 +20,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	var request serializers.CreateUserRequest
 	err := validation.ValidateRequest(w, r, &request)
 	if err != nil {
-		logrus.Error(err)
+		logrus.Error("error validating create user request", err)
 		return
 	}
 
@@ -29,14 +28,14 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	formattedDOB, err := daos.ConvertDateIntoTime(request.DateOfBirth)
 	if err != nil {
 		logrus.Error(err)
-		helpers.HTTPErrorResponse(w, "invald date of birth format", http.StatusBadRequest)
+		helpers.HTTPErrorResponse(w, "invalid date of birth format", http.StatusBadRequest)
 		return
 	}
 
 	formattedCompletionDate, err := daos.ConvertDateIntoTime(request.CompletionDate)
 	if err != nil {
 		logrus.Error(err)
-		helpers.HTTPErrorResponse(w, "invald date of completion date", http.StatusBadRequest)
+		helpers.HTTPErrorResponse(w, "invalid completion date", http.StatusBadRequest)
 		return
 	}
 
@@ -121,12 +120,11 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 		user, _, err := postgres.DbService.DAO.GetOrCreate(r.Context(), &model, &model)
 		if err != nil {
 			// check for a duplicate key error
-			if errors.Is(err, gorm.ErrDuplicatedKey) {
+			if err.Error() == gorm.ErrDuplicatedKey.Error() {
 				fmt.Println("Duplicate key error: Record already exists.")
 				return
 			} else {
-				logrus.Error(err)
-				logrus.Error(gorm.ErrDuplicatedKey.Error())
+				logrus.Error("error saving user", err)
 				helpers.HTTPErrorResponse(w, "Error creating user", http.StatusInternalServerError)
 				return
 			}
